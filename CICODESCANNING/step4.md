@@ -1,4 +1,5 @@
-## add this to the file
+## adding the  java build with maven pipeline
+open `workflow.yml`{{open}}  
 name: Java CI
 
 on: [push]
