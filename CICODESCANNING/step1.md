@@ -4,5 +4,5 @@ The first think to do is to fork the following GitHub repository and clone it: h
 this repository contains a simple java Hello world program. for which we will do the code scanning.
 first we can start by executing: 
 finally we can go to the cloned repository.
-`cd`{execute}
+`cd`{{execute}}
 
