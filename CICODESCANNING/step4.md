@@ -1,5 +1,6 @@
 ## adding the  java build with maven pipeline
 open `workflow.yml`{{open}}  
+<pre class="file" data-filename="app.js" data-target="prepend">
 name: Java CI
 
 on: [push]
@@ -15,5 +16,6 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: Build with Maven
+      - name: Build with Maven  
         run: mvn --batch-mode --update-snapshots verify
+</pre>
