@@ -1,6 +1,6 @@
 ## adding the  java build with maven pipeline
 open `workflow.yml`{{open}}  
-<pre class="file" data-filename="app.js" data-target="prepend">
+<pre class="file" data-filename="workflow.yml" data-target="prepend">
 name: Java CI
 
 on: [push]
