@@ -29,4 +29,4 @@ this code specify that every time a new element is pushed on the repository the 
 
 now add the file to git : `git add workflow.yml`{{execute}}  
 commit the changes: `git commit -m "new pilpline"`{{execute}}  
-and finally push your changes: `gir push`{{execute}}
+and finally push your changes: `git push`{{execute}}
