@@ -5,6 +5,6 @@ Go to actions tab.
 
 There your new commit should be marked in green.  
 
-![action](../assets/actions.png)
+![action](assets/actions.png)
 
 if the color is yellow it's still building give it some time.
