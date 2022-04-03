@@ -27,6 +27,6 @@ this code specify that every time a new element is pushed on the repository the 
 2-The setup-java step configures the Java 11 JDK by Adoptium.  
 3-The "Build with Maven" step runs the Maven package target in non-interactive mode to ensure that your code builds, tests pass, and a package can be created. 
 
-now add the file to git : `git add workflow.yml`{{execute}}
-commit the changes: `git commit -m "new pilpline"`{{execute}}
+now add the file to git : `git add workflow.yml`{{execute}}  
+commit the changes: `git commit -m "new pilpline"`{{execute}}  
 and finally push your changes: `gir push`{{execute}}

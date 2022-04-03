@@ -8,12 +8,13 @@ let's start by forking the new repository:
 https://github.com/abdelmoujibMegzari/hello_world  
 for those of you unfamiliar with GitHub open this link after you connect to your GitHub account.  
 on the top right of the screen you should see a fork button click on it.
-
+![fork](../assets/fork.png)
 A new repository will be created on your account that is an exact copy of this one. It should be open automaticaly after you have clicked on fork.
 
 Next clone the repository into your local machine.  
 For this tutorial we suggest that you use the Katacodas terminal.
 execute `git clone <repo>`
 you can get the repository link by clicking the green button on github on your repository  
+![clone](../assets/code.png)
 next go to the newly clowned repository.
 `cd hello_world`{{execute}}
