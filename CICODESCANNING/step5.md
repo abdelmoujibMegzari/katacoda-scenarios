@@ -15,7 +15,14 @@ Which basically:
 <pre class="file" data-filename="workflow.yml" data-target="prepend">
 name: Java CI
 
-on: [push]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [main]
+  schedule:
+    - cron: "25 11 ** 2"
 
 jobs:
   analyze:
@@ -29,27 +36,28 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'java' ]
+        language: ["java"]
+
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    # Initializes the CodeQL tools for scanning.
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v2
-      with:
-        languages: ${{ matrix.language }}
+      # Initializes the CodeQL tools for scanning.
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ matrix.language }}
 
-    - name: Set up JDK 14
+      - name: Set up JDK 14
         uses: actions/setup-java@v3
         with:
-          java-version: '14'
-          distribution: 'adopt'
-      - name: Build with Maven  
+          java-version: "14"
+          distribution: "adopt"
+      - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify
 
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v2
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
 </pre>
 
 Now add the changes:
