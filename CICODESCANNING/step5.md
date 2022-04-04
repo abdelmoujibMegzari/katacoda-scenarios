@@ -1,10 +1,61 @@
-# checking that the build happens correctly
-To check if the project builds correctly open your GitHub repository.  
+# Adding static scanning
 
-Go to actions tab.  
+Congratulation, now you had your first CI pipeline that builds a java app.
+Now, time to take it to the next level and add the static code scanning part.
 
-There your new commit should be marked in green.  
+So again, Open `workflow.yml`{{open}}
 
-![action](assets/actions.png)
+Then replace the workflow definition with the below
+Which basically:
 
-if the color is yellow it's still building give it some time.
+- Initialize CodeQL.
+- Build the code.
+- Run static scanning.
+
+<pre class="file" data-filename="workflow.yml" data-target="prepend">
+name: Java CI
+
+on: [push]
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java' ]
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Initializes the CodeQL tools for scanning.
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v2
+      with:
+        languages: ${{ matrix.language }}
+
+    - name: Set up JDK 14
+        uses: actions/setup-java@v3
+        with:
+          java-version: '14'
+          distribution: 'adopt'
+      - name: Build with Maven  
+        run: mvn --batch-mode --update-snapshots verify
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v2
+</pre>
+
+Now add the changes:
+
+Add the file to git : `git add .`{{execute}}
+
+Commit the changes: `git commit -m "Static scanning in pilpline"`{{execute}}  
+
+Finally push your changes: `git push`{{execute}}
