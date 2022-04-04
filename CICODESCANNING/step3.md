@@ -29,22 +29,11 @@ This code specify that every time a new element is pushed on the repository the 
 2- The setup-java step configures the Java 11 JDK by Adoptium.  
 3- The "Build with Maven" step runs the Maven package target in non-interactive mode to ensure that your code builds, tests pass, and a package can be created.
 
-Now to authenticate with your own Github account, do as below to install Github CLI:
+Now connect the console to your github account using any method you prefer
+https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github#authenticating-with-the-command-line
 
-Init:
-`sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0`{{execute}}
-`sudo apt-add-repository https://cli.github.com/`{{execute}}
+When connection works:
 
-Update:
-`sudo apt update`{{execute}}
-
-Install gh:
-`sudo apt install gh`{{execute}}
-
-Now authenticate with Github through browser
-`gh auth login -w`{{execute}}
-
-Everything succeeded then:
 Now add the file to git : `git add workflow.yml`{{execute}}
 
 Commit the changes: `git commit -m "new pilpline"`{{execute}}  
