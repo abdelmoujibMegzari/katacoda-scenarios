@@ -10,3 +10,6 @@ If the color is yellow it's still building give it some time.
 
 Now go to Security tab, and see if we got anything dangerous in the code.
 ![action](assets/security.png)
+
+Nice!
+Looks pretty clean..
