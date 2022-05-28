@@ -9,6 +9,6 @@ We can create a new folder that will contain our GitHub action code.
 
 `cd workflows`{{execute}}  
 
-After creating this folder we can create our new workflow yaml file.
+After creating this folder we can create our new workflow YAML file.
 
 `touch workflow.yml`{{execute}}

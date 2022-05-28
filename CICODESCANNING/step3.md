@@ -1,4 +1,4 @@
-# Adding the  java build with maven pipeline
+# Adding the  java build with the maven pipeline
 
 Open `workflow.yml`{{open}}
 
@@ -23,19 +23,19 @@ jobs:
         run: mvn --batch-mode --update-snapshots verify
 </pre>
 
-This code specify that every time a new element is pushed on the repository the folowing 3 steps thould be executed:  
+This code specifies that every time a new element is pushed on the repository the following 3 steps should be executed:  
 
 1- The checkout step downloads a copy of your repository on the runner.  
 2- The setup-java step configures the Java 11 JDK by Adoptium.  
 3- The "Build with Maven" step runs the Maven package target in non-interactive mode to ensure that your code builds, tests pass, and a package can be created.
 
-Now connect the console to your github account using any method you prefer
+Now connect the console to your GitHub account using any method you prefer
 https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/about-authentication-to-github#authenticating-with-the-command-line
 
-When connection works:
+When the connection works:
 
-Now add the file to git : `git add workflow.yml`{{execute}}
+Now add the file to git: `git add workflow.yml`{{execute}}
 
-Commit the changes: `git commit -m "new pilpline"`{{execute}}  
+Commit the changes: `git commit -m "new pipeline"`{{execute}}  
 
 Finally push your changes: `git push`{{execute}}
