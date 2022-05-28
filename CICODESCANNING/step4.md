@@ -1,7 +1,7 @@
 # Checking that the build ran correctly
-To check if the project builds correctly open your GitHub repository.  
+To check if the project builds correctly open your GitHub repository. 
 
-Go to actions tab.  
+Go to the Actions tab.  
 
 There your new commit should be marked in green.  
 
