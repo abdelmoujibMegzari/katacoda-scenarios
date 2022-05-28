@@ -27,8 +27,13 @@ Next, go to the newly cloned repository.
 
 Bonus:
 You can try to run the program.
+
 `mvn --batch-mode --update-snapshots verify`{{execute}}
+
 `cd target/classes`{{execute}}
+
 `java HelloWorld`{{execute}}
+
 You can enter your name now but remember, only a Jedi will know the truth.
+
 Solution for the easter egg at the end of the tutorial.

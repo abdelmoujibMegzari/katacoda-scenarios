@@ -25,9 +25,11 @@ Finally, if we check the running queries for java, we can see all the vulnerabil
 ![action](assets/checkedVulnerabilities.png)
 
 Now we are reaching the end of the tutorial.
+
 Master Yoda should have said it by now, but we want to say it again. May the force be with you!
 
 ![action](assets/yoda.png)
 
 This is the hidden easter egg. You can see it by typing the name of some Jedis like "yoda" or "skywalker" when running the hello world program
+
 credits to Blazej Kozlowski & Faux_Pseudo for this piece of art
