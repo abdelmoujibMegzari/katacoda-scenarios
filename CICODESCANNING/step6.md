@@ -13,3 +13,13 @@ Now go to Security tab, and see if we got anything dangerous in the code.
 
 Nice!
 Looks pretty clean..
+
+Now let's take a look at the different steps in our pipeline
+
+![action](assets/codeQLSteps.png)
+
+If we look at the perform codeQL analysis step, we can notice more information concerning the analysis.
+![action](assets/codeQLAnalysis.png)
+
+Finally, if we check the running queries for java, we can see all the vulnerabilities that codeQL has checked for.
+![action](assets/checkedVulnerabilities.png)
