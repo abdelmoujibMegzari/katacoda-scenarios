@@ -25,7 +25,7 @@ You can get the repository link by clicking the green button on Github on your r
 Next, go to the newly cloned repository.
 `cd hello_world`{{execute}}
 
-Bonus:
+**Bonus:**
 You can try to run the program.
 
 `mvn --batch-mode --update-snapshots verify`{{execute}}
